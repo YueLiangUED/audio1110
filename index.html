@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>双11邀请函-北京移动</title>
+    <style type="text/css">
+        .process {
+            position: relative;
+            height: 5px;
+            width: 250px;
+            background-color: rgb(201, 201, 201);
+        }
+        .process-now {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            background-color: rgb(236, 101, 56);
+        }
+        .process-dot {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            margin-top: -8px;
+            background-color: rgb(236, 101, 56);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body style="font-size: 22px;">
+    <button id="play" type="button">播放</button>
+    <button id="pause" type="button">暂停</button>
+    <button id="stop" type="button">停止</button>
+    <button id="muted" type="button">静音</button><br /><br />
+    音量控制：<input id="volume" type="range" name="points" min="0" max="100" value="50" step="1"/><br /><br />
+    <p>进度控制：</p>
+    <div class="process" id="process">
+        <span class="process-now"></span>
+        <span class="process-dot"></span>
+    </div><br />
+<button id="getprocess" type="button">获取当前进度</button>
+<script type="text/javascript" src="zepto.min.js"></script>
+<script type="text/javascript" src="audio.js"></script>
+
+</html>
